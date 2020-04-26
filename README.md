@@ -14,7 +14,7 @@ belongs_to :user
 ## usersテーブル
 |Column|Typ|Options|
 |------|----|-------|
-|name|string|null: false, add_index: true|
+|name|string|null: false, index: true|
 |email|string|null: false, unique: true|
 ## Association
 has_many :groups_users
@@ -25,7 +25,7 @@ has_many :messages
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false, unique: true|
+|name|string|null: false, unique: true|
 ## Association
 has_many :groups_users
 has_many :users, through: groups_users
